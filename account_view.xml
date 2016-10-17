@@ -6,7 +6,7 @@
             <field name="name">account.tipo.tarjeta.tree</field>
             <field name="model">account.tipo.tarjeta</field>
             <field name="arch" type="xml">
-		<tree string="Tipo de Tarjeta" editable="bottom">
+		<tree string="Tipo de Tarjeta" >
 			<field name="name" />
 		</tree>
 	    </field>
