@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+
+        <record id="tipo_tarjeta_tree_view" model="ir.ui.view">
+            <field name="name">account.tipo.tarjeta.tree</field>
+            <field name="model">account.tipo.tarjeta</field>
+            <field name="arch" type="xml">
+		<tree string="Tipo de Tarjeta">
+			<field name="name" />
+		</tree>
+	    </field>
+	</record>
+
+        <record id="action_tipo_tarjeta" model="ir.actions.act_window">
+            <field name="name">Tipos de Tarjeta</field>
+            <field name="res_model">account.tipo.tarjeta</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem action="action_tipo_tarjeta" id="menu_tipo_tarjeta" parent="base.menu_localisation" sequence="3" />
+
+
+    </data>
+</openerp>
