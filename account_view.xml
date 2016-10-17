@@ -19,7 +19,8 @@
             <field name="view_mode">tree,form</field>
         </record>
 
-        <menuitem action="action_tipo_tarjeta" id="menu_tipo_tarjeta" parent="base.menu_localisation" sequence="3" />
+        <menuitem action="action_tipo_tarjeta" id="menu_tipo_tarjeta" 
+		parent="account.menu_configuration_misc" sequence="3" />
 
 
     </data>
