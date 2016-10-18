@@ -18,6 +18,11 @@ class account_tipo_tarjeta(models.Model):
 
 	name = fields.Char('Nombre')
 
+class account_journal(models.Model):
+	_inherit = 'account.journal'
+
+	is_credit_card = fields.Boolean('Tarjeta de Credito')
+
 
 class account_voucher(models.Model):
 	_inherit = 'account.voucher'
