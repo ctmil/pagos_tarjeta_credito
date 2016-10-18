@@ -6,6 +6,20 @@
         <record model="ir.ui.view" id="view_voucher_form_tarjeta">
             <field name="name">account.voucher.form.tarjeta</field>
             <field name="model">account.voucher</field>
+            <field name="inherit_id" ref="account_voucher.view_vendor_receipt_form"/>
+            <field name="arch" type="xml">
+		<field name="name" position="after">
+			<field name="is_credit_card" invisible="1" />
+			<field name="tipo_tarjeta" attrs="{'invisible': [('is_credit_card', '=', False)]}"/>
+			<field name="nro_tarjeta" attrs="{'invisible': [('is_credit_card', '=', False)]}"/>
+			<field name="nro_cupon" attrs="{'invisible': [('is_credit_card', '=', False)]}"/>
+		</field>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_voucher_dialog_form_tarjeta">
+            <field name="name">account.voucher.dialog.form.tarjeta</field>
+            <field name="model">account.voucher</field>
             <field name="inherit_id" ref="account_voucher.view_vendor_receipt_dialog_form"/>
             <field name="arch" type="xml">
 		<field name="name" position="after">
