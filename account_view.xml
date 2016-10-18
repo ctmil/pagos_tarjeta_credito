@@ -10,7 +10,7 @@
             <field name="arch" type="xml">
 		<field name="name" position="after">
 			<field name="is_credit_card" invisible="1"
-			<field name="tipo_tarjeta" attrs="{'invisible': [('is_credit_card', '=', False)]}"/>
+			<field name="tipo_tarjeta" attrs="{'invisible': [('is_credit_card', '=', 'False')]}"/>
 			<field name="nro_tarjeta" />
 			<field name="nro_cupon" />
 		</field>
