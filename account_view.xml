@@ -85,6 +85,19 @@
 	    </field>
 	</record>
 
+        <record id="view_pagos_tarjeta_search" model="ir.ui.view">
+            <field name="name">view.pagos.tarjeta.search</field>
+            <field name="model">account.voucher</field>
+	    <field name="inherit_id" ref="account_voucher.view_voucher_filter" />
+            <field name="arch" type="xml">
+		<search string="Search Vouchers">
+                     <field name="nro_tarjeta" string="Nro Tarjeta"/>
+                     <field name="tipo_tarjeta" string="Tipo Tarjeta"/>
+                     <field name="nro_cupon" string="Cupon"/>
+		</search>
+	    </field>
+	</record>
+
         <record id="action_view_pagos_tarjeta" model="ir.actions.act_window">
             <field name="name">Pagos con Tarjeta</field>
             <field name="res_model">account.voucher</field>
