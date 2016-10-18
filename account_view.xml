@@ -11,8 +11,8 @@
 		<field name="name" position="after">
 			<field name="is_credit_card" invisible="1" />
 			<field name="tipo_tarjeta" attrs="{'invisible': [('is_credit_card', '=', False)]}"/>
-			<field name="nro_tarjeta" />
-			<field name="nro_cupon" />
+			<field name="nro_tarjeta" attrs="{'invisible': [('is_credit_card', '=', False)]}"/>
+			<field name="nro_cupon" attrs="{'invisible': [('is_credit_card', '=', False)]}"/>
 		</field>
             </field>
         </record>
