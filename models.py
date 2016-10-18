@@ -32,3 +32,10 @@ class account_voucher(models.Model):
 	nro_tarjeta = fields.Char('Nro Tarjeta')
 	tipo_tarjeta = fields.Many2one('account.tipo.tarjeta',string='Tipo Tarjeta')
 
+	@api.one
+	@api.constrains('nro_cupon','nro_tarjeta','tipo_tarjeta')
+	def _check_pago_tarjeta(self):
+		if self.is_credit_card:
+			if (not self.nro_cupon) or (not self.nro_tarjeta) or (not self.tipo_tarjeta):
+				raise ValidationError("Debe ingresar los datos de pago de tarjeta")
+
