@@ -27,6 +27,7 @@ class account_journal(models.Model):
 class account_voucher(models.Model):
 	_inherit = 'account.voucher'
 
+	is_credit_card = fields.Boolean('Es tarjeta de credito',related='journal_id.is_credit_card')
 	nro_cupon = fields.Char('Nro Cupon')
 	nro_tarjeta = fields.Char('Nro Tarjeta')
 	tipo_tarjeta = fields.Many2one('account.tipo.tarjeta',string='Tipo Tarjeta')

@@ -9,7 +9,8 @@
             <field name="inherit_id" ref="account_voucher.view_vendor_receipt_dialog_form"/>
             <field name="arch" type="xml">
 		<field name="name" position="after">
-			<field name="tipo_tarjeta" />
+			<field name="is_credit_card" invisible="1"
+			<field name="tipo_tarjeta" attrs="{'invisible': [('is_credit_card', '=', False)]}"/>
 			<field name="nro_tarjeta" />
 			<field name="nro_cupon" />
 		</field>
