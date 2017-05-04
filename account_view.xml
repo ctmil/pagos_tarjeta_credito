@@ -13,6 +13,7 @@
 			<field name="tipo_tarjeta" attrs="{'invisible': [('is_credit_card', '=', False)]}"/>
 			<field name="nro_tarjeta" attrs="{'invisible': [('is_credit_card', '=', False)]}"/>
 			<field name="nro_cupon" attrs="{'invisible': [('is_credit_card', '=', False)]}"/>
+			<field name="cant_cuotas" attrs="{'invisible': [('is_credit_card', '=', False)]}"/>
 		</field>
             </field>
         </record>
@@ -27,6 +28,7 @@
 			<field name="tipo_tarjeta" attrs="{'invisible': [('is_credit_card', '=', False)]}"/>
 			<field name="nro_tarjeta" attrs="{'invisible': [('is_credit_card', '=', False)]}"/>
 			<field name="nro_cupon" attrs="{'invisible': [('is_credit_card', '=', False)]}"/>
+			<field name="cant_cuotas" attrs="{'invisible': [('is_credit_card', '=', False)]}"/>
 		</field>
             </field>
         </record>
@@ -75,6 +77,7 @@
 		    <field name="tipo_tarjeta" />
 		    <field name="nro_tarjeta" />
 		    <field name="nro_cupon" />
+		    <field name="cant_cuotas" />
                     <field name="journal_id" groups="account.group_account_user"/>
                     <field name="period_id" invisible="context.get('visible', True)"/>
                     <field name="type" invisible="context.get('visible', True)"/>
